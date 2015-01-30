@@ -14,5 +14,8 @@ $('td:nth-of-type(3)').addClass('year');
 //Done
 
 //Ass.:Add the class of special to the first table row that has the word Tragedy in it.
+$('tr:contains("Tragedy"):first').addClass('special');
+//Done
+
 //Ass.:Challenge: Select all of the list items (<li>) containing a link (<a>). Add the class afterlink to the sibling list items that follow the ones selected.
 //Ass.:Challenge: Add the class tragedy to the closest ancestor (<ul>) of any .pdf link.
