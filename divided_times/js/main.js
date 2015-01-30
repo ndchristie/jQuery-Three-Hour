@@ -11,14 +11,15 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
 
 /* begin ass. code */
 
-$(document).on('click', 'a[href]', function(){
+$(document).on('click', 'a[href]', function(ev){
 	var $anchor = $(this);
 	var href = $anchor.attr('href');
 	var $local_target = $(href);
 	if($local_target.length > 0){//if object with matching ID was found
 		//console.log($(href));
 		if($("#slide-down").find($local_target)){
-			console.log('anchor to slide-down child section');
+			//console.log('anchor to slide-down child section');
+			ev.preventDefault();
 		} else {
 			console.log('normal anchor');
 			return true; //allow default
