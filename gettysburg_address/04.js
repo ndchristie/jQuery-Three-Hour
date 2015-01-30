@@ -41,3 +41,24 @@ $(document).on('click', '#switcher-default', function(){
 //Done
 
 //Ass.:Challenge: React to presses of the arrow keys by smoothly moving the switcher box 20 pixels in the corresponding direction. The key codes for the arrow keys are: 37 (left), 38 (up), 39 (right), and 40 (down).
+$(document).on('keyup', function(ev){
+	var key = ev.keyCode || ev.which;
+	console.log(key);
+	if(37 <= key && key <= 40){
+		console.log(key);
+		if(key == 37){//left
+			move = [-20,0];
+		} else if(key == 38){//up
+			move = [0,-20];
+		} else if(key == 39){//right
+			move = [20,0];
+		} else {//down
+			move = [0,20];
+		}
+		$('#switcher').animate({
+			'left':'+='+move[0]+'px',
+			'top':'+='+move[1]+'px',
+		},250);
+	}
+});
+//Done
