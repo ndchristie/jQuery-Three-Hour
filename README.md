@@ -64,7 +64,7 @@ $("my-selector").removeClass("class");
 $("my-selector").toggleClass("class");
 ```
 
-##Shakespeare's Plays Exercise
+##DOM Manipulation Exercise: Shakespeare's Plays
 - Download the starter code files [here](shakespeares_plays/).
 - Add a class of `special` to all of the `<li>` elements at the second level of the nested list.
 - Add a class of `year` to all of the table cells in the third column of a table.
@@ -173,7 +173,7 @@ $("my-selector").animate({
 });
 ```
 
-##Animation Exercise
+##Animation Exercise: Gettysburg Address
 - Download the exercise files [here](gettysburg_address/).
 - Alter the stylesheet to hide the contents of the page initially. When the page is loaded, fade in the contents slowly.
 - Give each paragraph a yellow background only when the mouse is over it.
