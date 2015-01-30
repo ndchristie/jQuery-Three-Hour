@@ -22,3 +22,5 @@ $('a').closest('li').nextAll('li').addClass('afterlink');
 //Done
 
 //Ass.:Challenge: Add the class tragedy to the closest ancestor (<ul>) of any .pdf link.
+$('a[href*=".pdf"]').closest('ul').addClass('tragedy');
+//Done
