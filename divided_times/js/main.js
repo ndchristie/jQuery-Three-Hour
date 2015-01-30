@@ -21,4 +21,4 @@ $(document).on('click', 'a[href]', function(){
 		console.log('not an anchor');
 		return true; //allow default
 	}
-})
+});
