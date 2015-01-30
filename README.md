@@ -180,3 +180,18 @@ $("my-selector").animate({
 - Make a click of the title (`<h2>`) and simultaneously fade it to 25 percent opacity and grow its left-hand margin to 20px. Then, when this animation is complete, fade the speech text to 50 percent opacity.
 - Make the style switcher work.
 - Challenge: React to presses of the arrow keys by smoothly moving the switcher box 20 pixels in the corresponding direction. The key codes for the arrow keys are: 37 (left), 38 (up), 39 (right), and 40 (down).
+
+##In-Class Lab / Homework
+- You will be hacking on a newspaper article website and making it cool using jQuery.
+- Download the exercise files [here](divided_times/).
+- The code in js/main.js is obfuscated, which means it is practically unreadable.
+- Your job is to look through the way the site works and try to replicate the same functionality using jQuery.
+- A couple of functions you may want to use for this, but are not necessarily required:
+	- .toggleClass()
+	- .hasClass()
+	- .hide()
+	- .show()
+	- .slideUp()
+	- .siblings()
+	- .removeClass()
+	- .addClass()
