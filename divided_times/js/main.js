@@ -24,6 +24,7 @@ $(document).on('click', 'a[href]', function(ev){
 			if($local_target.is(':visible')){
 				console.log('target already visible: hiding');
 				$slide_down.slideUp(function(){
+					$anchor.closest('li').removeClass('active');
 					$slide_down.children().hide()
 				});
 				return true; //nothing left to do
@@ -31,6 +32,7 @@ $(document).on('click', 'a[href]', function(ev){
 				console.log('making target visible');
 				var delay = 0;//we might have ot wait for animation
 				if($slide_down.is(':visible')){
+					$anchor.closest('li').addClass('active').siblings().removeClass('active');
 					$slide_down.find('section:visible').fadeOut({complete: function(){//fade out whichever slide is visible
 						$local_target.fadeIn();
 					}});
@@ -38,6 +40,7 @@ $(document).on('click', 'a[href]', function(ev){
 				} else {
 					$slide_down.find('section').hide();
 					$local_target.show();
+					$anchor.closest('li').addClass('active');
 					$slide_down.slideDown();
 					return true; //nothing left to do
 				}
