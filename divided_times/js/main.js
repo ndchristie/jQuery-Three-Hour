@@ -17,11 +17,12 @@ $(document).on('click', 'a[href]', function(ev){
 	var $local_target = $(href);
 	if($local_target.length > 0){//if object with matching ID was found
 		//console.log($(href));
-		if($("#slide-down").find($local_target)){
+		var $slide_down = $("#slide-down");
+		if($slide_down.length > 0 && $slide_down.find($local_target).length > 0){//if there is explicitly a #slide-down and it explicitly contains the local target
 			//console.log('anchor to slide-down child section');
 			ev.preventDefault();
 		} else {
-			console.log('normal anchor');
+			console.log('normal anchor or #slide-down not present');
 			return true; //allow default
 		}
 	} else {
