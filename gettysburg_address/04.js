@@ -4,6 +4,11 @@
 //Done
 
 //Ass.:Alter the stylesheet to hide the contents of the page initially. When the page is loaded, fade in the contents slowly.
+$(window).on('load', function(){
+	$('body').fadeIn(800);
+});
+//Done
+
 //Ass.:Give each paragraph a yellow background only when the mouse is over it.
 //Ass.:Make a click of the title (<h2>) and simultaneously fade it to 25 percent opacity and grow its left-hand margin to 20px. Then, when this animation is complete, fade the speech text to 50 percent opacity.
 //Ass.:Make the style switcher work.
