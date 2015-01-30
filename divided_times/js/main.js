@@ -16,7 +16,13 @@ $(document).on('click', 'a[href]', function(){
 	var href = $anchor.attr('href');
 	var $local_target = $(href);
 	if($local_target.length > 0){//if object with matching ID was found
-		console.log($(href));
+		//console.log($(href));
+		if($("#slide-down").find($local_target)){
+			console.log('anchor to slide-down child section');
+		} else {
+			console.log('normal anchor');
+			return true; //allow default
+		}
 	} else {
 		console.log('not an anchor');
 		return true; //allow default
