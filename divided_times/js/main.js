@@ -23,8 +23,21 @@ $(document).on('click', 'a[href]', function(ev){
 			ev.preventDefault();
 			if($local_target.is(':visible')){
 				console.log('target already visible');
+				return true; //nothing left to do
 			} else {
-				console.log('making traget visible');
+				console.log('making target visible');
+				var delay = 0;//we might have ot wait for animation
+				if($slide_down.is(':visible')){
+					$slide_down.find('section:visible').fadeOut({complete: function(){//fade out whichever slide is visible
+						$local_target.fadeIn();
+					}});
+					return true; //nothing left to do
+				} else {
+					$slide_down.find('section').hide();
+					$local_target.show();
+					$slide_down.slideDown();
+					return true; //nothing left to do
+				}
 			}
 		} else {
 			console.log('normal anchor or #slide-down not present');
