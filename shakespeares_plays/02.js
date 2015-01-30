@@ -5,6 +5,9 @@
 //Done
 
 //Ass.:Add a class of special to all of the <li> elements at the second level of the nested list.
+$('#selected-plays > li > ul > li').addClass('special');
+//Done
+
 //Ass.:Add a class of year to all of the table cells in the third column of a table.
 //Ass.:Hint: Take a look at how many columns are in each table.
 //Ass.:Add the class of special to the first table row that has the word Tragedy in it.
