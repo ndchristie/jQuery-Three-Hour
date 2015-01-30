@@ -31,4 +31,13 @@ $(document).on('click', 'h2', function(){
 //Done
 
 //Ass.:Make the style switcher work.
+$(document).on('click', '#switcher-default', function(){
+	$('html').css({'font-size':''});//16px
+}).on('click', '#switcher-large', function(){
+	$('html').css({'font-size':'+=2px'});
+}).on('click', '#switcher-small', function(){
+	$('html').css({'font-size':'-=2px'});
+});
+//Done
+
 //Ass.:Challenge: React to presses of the arrow keys by smoothly moving the switcher box 20 pixels in the corresponding direction. The key codes for the arrow keys are: 37 (left), 38 (up), 39 (right), and 40 (down).
