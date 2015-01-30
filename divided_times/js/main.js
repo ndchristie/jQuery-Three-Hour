@@ -22,7 +22,10 @@ $(document).on('click', 'a[href]', function(ev){
 			//console.log('anchor to slide-down child section');
 			ev.preventDefault();
 			if($local_target.is(':visible')){
-				console.log('target already visible');
+				console.log('target already visible: hiding');
+				$slide_down.slideUp(function(){
+					$slide_down.children().hide()
+				});
 				return true; //nothing left to do
 			} else {
 				console.log('making target visible');
