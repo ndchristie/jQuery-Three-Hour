@@ -21,6 +21,11 @@ $(document).on('click', 'a[href]', function(ev){
 		if($slide_down.length > 0 && $slide_down.find($local_target).length > 0){//if there is explicitly a #slide-down and it explicitly contains the local target
 			//console.log('anchor to slide-down child section');
 			ev.preventDefault();
+			if($local_target.is(':visible')){
+				console.log('target already visible');
+			} else {
+				console.log('making traget visible');
+			}
 		} else {
 			console.log('normal anchor or #slide-down not present');
 			return true; //allow default
