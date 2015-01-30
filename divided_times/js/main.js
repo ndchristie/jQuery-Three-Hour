@@ -14,15 +14,6 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
 $(document).on('click', 'a[href]', function(){
 	var $anchor = $(this);
 	var href = $anchor.attr('href');
-
-	/* clunky regex version *//**
-	var page_anchor_test = /^\#\w+$/; //if first char is # (^\#) followed by any count alphanumeric (\w+) and nothing else ($)
-	if(page_anchor_test.test(href){//if a clicked link is to an anchor
-		//we don't have to do this because we just end up looking for a matching selector, which we can do right away without testing the string.
-	}
-	/**/
-
-	// leaner selector version
 	var $local_target = $(href);
 	if($local_target.length > 0){//if object with matching ID was found
 		console.log($(href));
